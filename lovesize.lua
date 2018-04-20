@@ -1,5 +1,5 @@
 --[[
-    lovesize 0.2 by RicardoBusta
+    lovesize 0.3 by RicardoBusta
     https://github.com/RicardoBusta/
     https://github.com/RicardoBusta/lovesize
 
@@ -52,6 +52,14 @@ end
 -- Checks if the coordinate is inside the screen
 function lovesize.inside(x, y)
     return x >= lx and x < love.graphics.getWidth() - lx and y >= ly and y < love.graphics.getWidth() - ly
+end
+
+function lovesize.getWidth()
+    return lw
+end
+   
+function lovesize.getHeight()
+    return lh
 end
 
 return lovesize
