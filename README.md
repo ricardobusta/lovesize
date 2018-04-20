@@ -5,6 +5,9 @@ Makes it easier to work with a fixed resolution.
 how to use:
 
 ```lua
+-- How to include the lib into the project
+local lovesize = require("lovesize/lovesize")
+
 -- Pass desired resolution (can be called again to change it)
 function love.load()
     lovesize.set(800, 600)
