@@ -1,5 +1,5 @@
 --[[
-    lovesize 0.1 by RicardoBusta
+    lovesize 0.2 by RicardoBusta
     https://github.com/RicardoBusta/
     https://github.com/RicardoBusta/lovesize
 
@@ -11,7 +11,7 @@ local lx, ly = 0 -- translation required to center the game area
 local ls = 1 -- scale to fit the game screen to love screen
 
 -- Set lovesize with the desired width, height and options
-function lovesize.load(w, h, options)
+function lovesize.set(w, h, options)
     lw = w or lw
     lovesize.height = h or lovesize.height
     lovesize.resize(love.graphics.getWidth(), love.graphics.getHeight())
@@ -47,6 +47,11 @@ end
 function lovesize.pos(x, y)
     local is = 1 / ls
     return math.floor((x - lx) * is), math.floor((y - ly) * is)
+end
+
+-- Checks if the coordinate is inside the screen
+function lovesize.inside(x, y)
+    return x >= lx and x < love.graphics.getWidth() - lx and y >= ly and y < love.graphics.getWidth() - ly
 end
 
 return lovesize
