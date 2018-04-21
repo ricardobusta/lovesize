@@ -44,3 +44,13 @@ function love.mousepressed(x, y, button, istouch)
     end
 end
 ```
+
+Example:
+
+800x600 resolution within vertical window:
+
+![800x600 vertical](https://github.com/RicardoBusta/lovesize/blob/gh-pages/800x600_1.png)
+
+800x600 resolution within horizontal window:
+
+![800x600 horizontal](https://github.com/RicardoBusta/lovesize/blob/gh-pages/800x600_2.png)
